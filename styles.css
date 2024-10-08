@@ -1,7 +1,7 @@
 :root {
     --branco-principal: #FFFFFF;
     --cinza-secundario: #C0C0C0;
-    --botao-azul: #167BF7;
+    --botao-azul: #003366; /* Azul escuro */
     --cor-de-fundo: #00030C;
     --fonte-principal: 'Inter';
     --botao-azul-efeito: #3c92fa;
@@ -21,17 +21,39 @@ body {
 }
 
 .principal {
-    background-image: url("img/Background.png");
+    background-image: url("https://www.alura.com.br/assets/img/escola-categorias/sharing/escola-programacao-share.1647533643.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    display: flex;
     align-items: center;
-    text-align: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 .container {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 50% 50%;
+    width: 80%; /* Largura da tabela */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: flex-start; /* Alinhamento dos itens no topo */
+}
+
+.container__caixa {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo interno */
+    align-items: center; /* Alinhamento vertical */
+    flex-direction: column; /* Coloca texto e botões em coluna */
+    width: 100%;
+    text-align: center; /* Centraliza texto */
+}
+
+.container__descricao {
+    width: 100%; /* Largura total */
+}
+
+.container__botoes {
+    display: flex;
+    flex-direction: column; /* Botões em coluna */
+    align-items: center; /* Centraliza os botões */
 }
 
 .container__botao {
@@ -39,14 +61,13 @@ body {
     border-radius: 5px;
     padding: 1em;
     color: var(--branco-principal);
-    display: block;
     text-decoration: none;
-    margin-bottom: 1em;
+    margin-bottom: 1em; /* Espaçamento entre botões */
 }
 
 .botao_secundario {
     background-color: transparent;
-    border: 2px solid var(--branco-principal)
+    border: 2px solid var(--branco-principal);
 }
 
 .container__aviso {
@@ -63,59 +84,7 @@ body {
     margin: 1em 0 2em 0;
 }
 
-.container__caixa {
-    margin: 0 6em;
-}
-
-.secundario__imagem {
-    width: 80%;
-}
-
-.secundario {
-    align-items: center;
-    margin: 0 10em;
-}
-
-.descricao__titulo {
-    font-weight: 700;
-    font-size: 48px;
-    color: var(--branco-principal);
-    margin-bottom: 0.1em;
-}
-
-.descricao__texto {
-    color: var(--cinza-secundario);
-}
-
-.secundario__botao {
-    display: inline-block;
-    margin-top: 1em;
-}
-
-.container__descricao {
-    padding: 2em;
-}
-
-.dispositivos__lista {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    margin: 5em 0;
-}
-
-.dispositivos {
-    text-align: center;
-}
-
-.dispositivos__titulo {
-    font-size: 48px;
-    color: var(--branco-principal);
-}
-
-.lista__item {
-    font-size: 32px;
-    color: var(--branco-principal);
-}
+/* Outros estilos aqui */
 
 .rodape {
     text-align: center;
@@ -129,7 +98,7 @@ body {
     margin-top: 1em;
 }
 
-.lista__link a{
+.lista__link a {
     text-decoration: none;
     color: var(--branco-principal);
     margin-left: 1em;
